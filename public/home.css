@@ -1,0 +1,378 @@
+/* ========== Reset & biến ========== */
+:root {
+  --maroon: #46001c;
+  --plum: #8b0a4f;
+  --blue: #99cffe;
+  --cream: #FFFED8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--maroon);
+  font-family: Barlow, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1296px;
+  margin-inline: auto;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--blue {
+  width: 300px;
+  height: 76px;
+  background: var(--blue);
+  color: #000;
+  font-family: Imbue, serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* ========== Hero ========== */
+.hero {
+  height: 795px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 125px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2)),
+    url("images/hero.png") center / cover no-repeat;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hero-title {
+  color: #fefef8;
+  font-family: "Croissant One", serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 95.598%;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ========== Tiêu đề xanh ========== */
+.title-blue {
+  color: var(--blue);
+  font-family: "Concert One", sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 95.598%;
+}
+
+.title-blue--center {
+  text-align: center;
+}
+
+/* ========== Journey ========== */
+.journey {
+  padding: 75px 0 0;
+}
+
+.scallop {
+  position: relative;
+  max-width: 1190px;
+  margin: 36px auto 0;
+  padding: 60px 0;
+}
+
+.scallop::before,
+.scallop::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+.scallop::before {
+  top: 0;
+  background: radial-gradient(
+      ellipse 50% 100% at 50% 100%,
+      var(--cream) 98%,
+      transparent 100%
+    )
+    0 0 / 9.09% 100% repeat-x;
+}
+
+.scallop::after {
+  bottom: 0;
+  background: radial-gradient(
+      ellipse 50% 100% at 50% 0,
+      var(--cream) 98%,
+      transparent 100%
+    )
+    0 0 / 9.09% 100% repeat-x;
+}
+
+.scallop-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 24px 53px 24px 79px;
+  background: var(--cream);
+}
+
+.journey-text {
+  flex: 1;
+  max-width: 565px;
+  color: var(--plum);
+  font-family: "Balsamiq Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 95.12%;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.journey-img {
+  width: 414px;
+  height: 515px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* ========== Life in Ten Village ========== */
+.life {
+  padding: 57px 0 98px;
+}
+
+.life-sub {
+  max-width: 360px;
+  margin: 16px 0 28px;
+  color: var(--blue);
+  font-family: Barlow, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 95.12%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.card {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-photo {
+  position: relative;
+  z-index: 1;
+  padding: 8px;
+  background: var(--cream);
+  border-radius: 50px;
+}
+
+.card-photo img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.card-body {
+  min-height: 110px;
+  margin-top: -10px;
+  padding: 14px 24px 18px;
+  background: var(--cream);
+  border-radius: 40px;
+  text-align: center;
+}
+
+.card-body h3 {
+  margin-bottom: 6px;
+  color: var(--maroon);
+  font-family: Imbue, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 95.598%;
+}
+
+.card-body p {
+  color: var(--plum);
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 95.12%;
+  letter-spacing: -0.2px;
+}
+
+/* ========== Commitment ========== */
+.commitment {
+  height: 622px;
+  background:
+    linear-gradient(rgba(70, 0, 28, 0.25), rgba(70, 0, 28, 0.25)),
+    url("images/hero.png") center bottom / cover no-repeat;
+}
+
+.commitment-inner {
+  position: relative;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.commitment-title {
+  color: var(--cream);
+  font-family: Imbue, serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 95.598%;
+}
+
+.commitment-box {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  width: 490px;
+  padding: 28px 30px;
+  background: var(--cream);
+  border-radius: 50px;
+  color: var(--maroon);
+  font-family: Barlow, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 95.12%;
+  letter-spacing: -0.11px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1280px) {
+  .hero-title {
+    font-size: 72px;
+  }
+
+  .title-blue {
+    font-size: 56px;
+  }
+
+  .journey-text {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .journey-img {
+    width: 340px;
+    height: 424px;
+  }
+
+  .card-photo img {
+    height: 380px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    height: 700px;
+    padding-bottom: 120px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .btn--blue {
+    width: 180px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .title-blue {
+    font-size: 44px;
+  }
+
+  .journey {
+    padding: 60px 0;
+  }
+
+  .scallop-inner {
+    flex-direction: column;
+    padding: 50px 24px;
+  }
+
+  .journey-text {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .journey-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .commitment {
+    height: 520px;
+  }
+
+  .commitment-title {
+    font-size: 44px;
+  }
+
+  .commitment-box {
+    position: static;
+    width: 100%;
+    margin-top: 260px;
+    font-size: 18px;
+  }
+}

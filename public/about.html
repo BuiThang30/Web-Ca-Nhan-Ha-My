@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - The Nourish Spoon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,300..700&family=Cause:wght@400..700&family=Croissant+One&family=Concert+One&family=Balsamiq+Sans:wght@400;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body class="page-about">
+
+  <!-- ===== NAV ===== -->
+  <header class="header">
+    <nav class="nav">
+      <a href="/home" class="nav-logo">
+        <img src="images/logo.png" alt="The Nourish Spoon" />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/children">Our Children</a></li>
+        <li><a href="/donation">Donation Process</a></li>
+        
+        <!-- Thêm nút Donate dành riêng cho Mobile vào bên trong menu -->
+        <li class="nav-btn-mobile">
+          <a href="/donation" class="btn btn--dark">DONATE ONLINE</a>
+        </li>
+      </ul>
+
+      <!-- Nút Donate bên ngoài (Chỉ hiển thị trên Desktop) -->
+      <a href="/donation" class="btn btn--dark nav-btn-desktop">DONATE ONLINE</a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+  <!-- ===== END NAV ===== -->
+
+  <!-- TEAM -->
+  <section class="team">
+    <div class="container team-inner">
+      <div class="team-photo">
+        <img class="team-img" src="images/team.png" alt="Đội ngũ The Nourish Spoon" />
+        <div class="team-logo">
+          <img src="images/logo.png" alt="The Nourish Spoon" />
+        </div>
+      </div>
+      <h1 class="team-title">Our Team<br />Our people</h1>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story">
+    <div class="container">
+      <div class="story-card">
+        <div class="story-banner">
+          <h2 class="story-slogan">Building nourishing meals<br />for the children of Ban Ten,<br />together.</h2>
+        </div>
+        <div class="story-body">
+          <div class="story-content">
+            <h2 class="title-blue story-title">Our Story</h2>
+            <p class="story-text">
+              In the highlands, many children face nutritional gaps despite the best efforts of their families and teachers. Therefore, we strive to combine growth measurements, WHO growth standards and locally available ingredients to recommend meals suited to children in each nutritional group, then connect donors so those meals can reach the children.
+            </p>
+          </div>
+          <img class="story-img" src="images/story.png" alt="Các em nhỏ và bữa ăn dinh dưỡng ở bản Tèn" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOWER (process + thanks + join) -->
+  <div class="lower">
+
+    <section class="process">
+      <div class="container">
+        <div class="process-grid">
+          <div class="process-col process-col--left">
+            <h3 class="process-heading">Measure &amp; group</h3>
+            <p class="process-text">Regular height and weight checks; children grouped using WHO growth standards.</p>
+          </div>
+          <div class="process-col process-col--center">
+            <h3 class="process-heading">Menu recommendation model</h3>
+            <p class="process-text">Proposes meals per group, balancing available ingredients and budget.</p>
+          </div>
+          <div class="process-col process-col--right">
+            <h3 class="process-heading">Donate &amp; track</h3>
+            <p class="process-text">Each contribution is linked to specific meals and updated publicly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="thanks">
+      <div class="container">
+        <p class="thanks-text">
+          Sincere thanks to
+          <span class="thanks-hl">Ước Mơ Vùng Biên<small>(Borderland Dreams)</small></span>
+          Organization for walking this journey with us.
+        </p>
+      </div>
+    </section>
+
+    <section class="join">
+      <div class="container">
+        <h2 class="join-title">Want to join us?</h2>
+        <div class="join-card">
+          <div class="contact-info">
+            <a href="https://www.facebook.com/thenourishspoon/" target="_blank" class="contact-item">
+              <!-- Icon Facebook -->
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+              </svg>
+              <span>facebook.com/thenourishspoon</span>
+            </a>
+            
+            <a href="mailto:thenourishspoon@gmail.com" class="contact-item">
+              <!-- Icon Email -->
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+              </svg>
+              <span>thenourishspoon@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

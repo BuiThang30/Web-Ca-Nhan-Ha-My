@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Where Meals Enrich Children</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,300..700&family=Cause:wght@400..700&family=Croissant+One&family=Concert+One&family=Balsamiq+Sans:wght@400;700&family=Barlow:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="nav.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="header">
+    <nav class="nav">
+      <a href="/home" class="nav-logo">
+        <img src="images/logo.png" alt="The Nourish Spoon" />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/children">Our Children</a></li>
+        <li><a href="/donation">Donation Process</a></li>
+        
+        <!-- Thêm nút Donate dành riêng cho Mobile vào bên trong menu -->
+        <li class="nav-btn-mobile">
+          <a href="/donation" class="btn btn--dark">DONATE ONLINE</a>
+        </li>
+      </ul>
+
+      <!-- Nút Donate bên ngoài (Chỉ hiển thị trên Desktop) -->
+      <a href="/donation" class="btn btn--dark nav-btn-desktop">DONATE ONLINE</a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+  <!-- ===== END NAV ===== -->
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1 class="hero-title">Where Meals<br />Enrich Children</h1>
+      <a href="/donation" class="btn btn--blue">JOIN US</a>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="journey">
+    <div class="container">
+      <h2 class="title-blue title-blue--center">Our Journey<br />from Tèn Village</h2>
+
+      <div class="scallop">
+        <div class="scallop-inner">
+          <p class="journey-text">
+            Tèn Village is a highland village in Thái Nguyên Province. Many families here rely on farming, and children's meals are not diverse in nutrients. After a field visit to Tèn Village, we noticed the urgent to improve their nutritional well-being. The project began with one simple question:<br />
+            How can every meal, even on a small budget, match what each child actually needs?
+          </p>
+          <img class="journey-img" src="images/journey.png" alt="Hai em nhỏ ở bản Tèn" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFE -->
+  <section class="life">
+    <div class="container">
+      <h2 class="title-blue">Life in Ten Village</h2>
+      <p class="life-sub">A glimpse into the everyday moments of children growing up in the highlands.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-photo"><img src="images/culture.png" alt="Culture &amp; Food" /></div>
+          <div class="card-body">
+            <h3>Culture &amp; Food</h3>
+            <p>At 1,200 meters above sea level, the Hmong people of Bản Tèn keep their homes, language and meals rooted in the seasons of rice, plum and peach.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-photo"><img src="images/day.png" alt="A day in their life" /></div>
+          <div class="card-body">
+            <h3>A day in their life</h3>
+            <p>Once a narrow, treacherous trail, the road to the village now sees children beginning their day amidst terraced fields and mountain mist on their way to school.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-photo"><img src="images/school.png" alt="School meals" /></div>
+          <div class="card-body">
+            <h3>School meals</h3>
+            <p>In the district's most remote village, a nourishing meal at school gives children the strength to learn and grow.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITMENT -->
+  <section class="commitment">
+    <div class="container commitment-inner">
+      <h2 class="commitment-title">Our Commitment</h2>
+      <p class="commitment-box">
+        We commit to financial transparency, to protecting the children's information, and to reporting our impact every quarter.
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

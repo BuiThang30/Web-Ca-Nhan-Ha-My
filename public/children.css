@@ -1,0 +1,370 @@
+/* Children page — load sau home.css và nav.css */
+.container {
+  width: 80%;
+  max-width: 1152px;
+  margin-inline: auto;
+}
+/* ========== Banner ========== */
+.children-banner {
+  position: relative;
+  z-index: 1;
+  margin-top: 192px;
+  padding: 40px 37px 56px;
+  background: var(--blue);
+  border-radius: 30px;
+}
+
+.banner-title {
+  color: var(--cream);
+  font-family: "Croissant One", serif;
+  font-size: 88px;
+  font-weight: 400;
+  line-height: 95.598%;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner-sub {
+  margin-top: 14px;
+  color: var(--plum);
+  font-family: Barlow, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* ========== Meet the Children ========== */
+.meet {
+  margin-top: -60px;
+  border-radius: 40px;
+  padding-top: 100px;
+  background: var(--cream);
+}
+
+.meet-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 45px;
+  padding: 0 20px;
+}
+
+.meet-title {
+  flex-shrink: 0;
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 95.598%;
+  text-align: right;
+}
+
+.meet-text {
+  max-width: 662px;
+  color: var(--plum);
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.05;
+  text-align: justify;
+}
+
+.meet-text strong {
+  font-weight: 700;
+}
+
+.meet-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 41px;
+  margin-top: 34px;
+}
+
+.meet-photos img {
+  width: 100%;
+  height: 507px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+/* ========== Nutritional Groups ========== */
+.groups-title {
+  margin: 90px 0 36px;
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.groups-box {
+  overflow: hidden;
+  background: var(--cream);
+  border-radius: 0 0 14px 14px;
+}
+
+.groups-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 3px solid var(--blue);
+}
+
+.groups-table th,
+.groups-table td {
+  padding: 12px 16px;
+  border: 3px solid var(--blue);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.groups-table th {
+  height: 88px;
+  color: var(--maroon);
+  font-family: Imbue, serif;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.groups-table td {
+  height: 181px;
+  color: var(--plum);
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.groups-table .cell-group {
+  color: var(--maroon);
+  font-family: Imbue, serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.groups-table th:nth-child(1) {
+  width: 30%;
+}
+
+.groups-table th:nth-child(2) {
+  width: 36%;
+}
+
+.groups-table th:nth-child(3) {
+  width: 34%;
+}
+
+.groups-note {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px 20px 44px;
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.18;
+  text-align: center;
+}
+
+/* ========== Local Ingredients ========== */
+.local {
+  margin-top: 86px;
+  padding-top: 35px;
+  border-top: 1px solid var(--blue);
+}
+
+.local-row {
+  display: flex;
+  align-items: center;
+  gap: 53px;
+}
+
+.local-title {
+  flex-shrink: 0;
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 88px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.local-text {
+  flex: 1;
+  color: var(--cream);
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+/* ========== Sample Menu ========== */
+.menu-heading {
+  margin-top: 43px;
+  padding: 33px 20px;
+  background: var(--cream);
+  border: 3px solid var(--blue);
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.menu-table {
+  width: 100%;
+  margin-top: 38px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 3px solid var(--cream);
+}
+
+.menu-table th,
+.menu-table td {
+  padding: 12px 16px;
+  border: 3px solid var(--cream);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.menu-table th {
+  height: 88px;
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.menu-table td {
+  height: 112px;
+  color: var(--blue);
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.menu-table .cell-meal {
+  font-family: Imbue, serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.menu-table th:nth-child(1) {
+  width: 30%;
+}
+
+/* ========== CTA ========== */
+.cta {
+  min-height: 400px;
+  margin: 43px 0 0;
+  background: var(--blue);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1439px) {
+  .banner-title { font-size: 80px; }
+  .meet-title { font-size: 84px; }
+  .meet-photos img { height: 470px; }
+  .groups-title { font-size: 72px; }
+  .groups-table .cell-group,
+  .menu-table .cell-meal { font-size: 36px; }
+  .local-title { font-size: 80px; }
+  .menu-heading { font-size: 72px; }
+}
+
+@media (max-width: 1200px) {
+  .children-banner { margin-top: 170px; }
+  .banner-title { font-size: 68px; }
+  .banner-sub { font-size: 20px; }
+  .meet-head { gap: 32px; }
+  .meet-title { font-size: 72px; }
+  .meet-text { font-size: 18px; }
+  .meet-photos { gap: 28px; }
+  .meet-photos img { height: 400px; border-radius: 32px; }
+  .groups-title { font-size: 64px; }
+  .groups-table th,
+  .menu-table th { font-size: 32px; }
+  .groups-table .cell-group,
+  .menu-table .cell-meal { font-size: 32px; }
+  .groups-table td { height: 150px; font-size: 18px; }
+  .menu-table td { height: 96px; font-size: 18px; }
+  .groups-note { font-size: 34px; }
+  .local-title { font-size: 68px; }
+  .local-text { font-size: 18px; }
+  .menu-heading { font-size: 64px; }
+}
+
+@media (max-width: 1024px) {
+  .children-banner { margin-top: 150px; padding: 32px 28px 44px; }
+  .banner-title { font-size: 56px; }
+  .meet { padding-top: 80px; }
+  .meet-head { gap: 24px; padding: 0 16px; }
+  .meet-title { font-size: 60px; }
+  .meet-photos { gap: 20px; }
+  .meet-photos img { height: 320px; border-radius: 28px; }
+  .groups-title { margin-top: 70px; font-size: 54px; }
+  .groups-table th,
+  .menu-table th { font-size: 28px; }
+  .groups-table .cell-group,
+  .menu-table .cell-meal { font-size: 28px; }
+  .groups-table td { height: 130px; font-size: 17px; }
+  .groups-note { font-size: 30px; }
+  .local { margin-top: 60px; }
+  .local-row { gap: 32px; }
+  .local-title { font-size: 56px; }
+  .local-text { font-size: 17px; }
+  .menu-heading { padding: 24px 20px; font-size: 54px; }
+  .menu-table td { height: 84px; font-size: 17px; }
+  .cta { min-height: 320px; }
+}
+
+@media (max-width: 768px) {
+  .children-banner { margin-top: 130px; }
+  .banner-title { font-size: 44px; }
+  .banner-sub { font-size: 18px; }
+  .meet { padding-top: 70px; }
+  .meet-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .meet-title { font-size: 52px; text-align: left; }
+  .meet-text { max-width: none; font-size: 17px; text-align: left; }
+  .meet-photos { gap: 14px; }
+  .meet-photos img { height: 260px; border-radius: 22px; }
+  .groups-title { font-size: 46px; }
+  .groups-table th,
+  .menu-table th { height: 64px; font-size: 24px; }
+  .groups-table .cell-group,
+  .menu-table .cell-meal { font-size: 24px; }
+  .groups-table td { height: 110px; padding: 10px; font-size: 16px; }
+  .groups-note { padding: 30px 16px 34px; font-size: 26px; }
+  .local-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .local-title { font-size: 48px; }
+  .menu-heading { padding: 20px; font-size: 44px; }
+  .menu-table td { height: 72px; padding: 10px; font-size: 16px; }
+  .cta { min-height: 260px; border-radius: 24px; }
+}
+
+@media (max-width: 480px) {
+  .children-banner { margin-top: 100px; padding: 24px 20px 32px; border-radius: 22px; }
+  .banner-title { font-size: 32px; }
+  .banner-sub { font-size: 15px; }
+  .meet { padding-top: 56px; }
+  .meet-title { font-size: 40px; }
+  .meet-text { font-size: 15px; }
+  .meet-photos { grid-template-columns: 1fr; }
+  .meet-photos img { height: 260px; }
+  .groups-title { margin: 56px 0 24px; font-size: 36px; }
+  .groups-table th,
+  .menu-table th { height: 52px; padding: 6px; font-size: 18px; }
+  .groups-table .cell-group,
+  .menu-table .cell-meal { font-size: 18px; }
+  .groups-table td { height: 90px; padding: 6px; font-size: 13px; }
+  .groups-note { font-size: 20px; }
+  .local { margin-top: 48px; }
+  .local-title { font-size: 40px; }
+  .local-text { font-size: 15px; }
+  .menu-heading { padding: 14px; font-size: 34px; }
+  .menu-table td { height: 64px; padding: 6px; font-size: 13px; }
+  .cta { min-height: 200px; margin-bottom: 50px; }
+}

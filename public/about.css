@@ -1,0 +1,422 @@
+/* About page — load sau home.css và nav.css */
+
+:root {
+  --paper: #fffdd8;
+}
+
+.container {
+  width: 80%;
+  max-width: 1152px;
+  margin-inline: auto;
+}
+
+/* ========== Team ========== */
+.team {
+  padding-top: 140px;
+}
+
+.team-inner {
+  display: grid;
+  grid-template-columns: 608px 1fr;
+  column-gap: 137px;
+  align-items: start;
+}
+
+.team-photo {
+  position: relative;
+}
+
+.team-img {
+  width: 100%;
+  height: 525px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.team-logo {
+  position: absolute;
+  right: -135px;
+  bottom: 30px;
+  width: 210px;
+  height: 226px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border-radius: 30px;
+  transform: rotate(5deg);
+}
+
+.team-logo img {
+  width: 110px;
+  height: auto;
+}
+
+.team-title {
+  color: var(--cream);
+  font-family: "Croissant One", serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 95.598%;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ========== Story ========== */
+.story {
+  padding-top: 15px;
+}
+
+.story-card {
+  overflow: hidden;
+  border-radius: 30px;
+  background: var(--paper);
+}
+
+.story-banner {
+  padding: 30px 33px;
+  background: var(--blue);
+}
+
+.story-slogan {
+  color: var(--cream);
+  font-family: Imbue, serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 95.598%;
+}
+
+.story-body {
+  display: grid;
+  grid-template-columns: 1fr 567px;
+  column-gap: 67px;
+  align-items: start;
+  padding: 79px 23px 70px 36px;
+}
+
+.story-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 755px;
+}
+
+.story-title {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  font-size: 70px;
+}
+
+.story-text {
+  max-width: 516px;
+  color: var(--plum);
+  font-family: "Balsamiq Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-align: right;
+}
+
+.story-img {
+  width: 100%;
+  height: 755px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+/* ========== Lower: nền chéo dùng chung ========== */
+.lower {
+  position: relative;
+  padding-top: 50px;
+}
+
+.lower::before {
+  content: "";
+  position: absolute;
+  top: 220px;
+  left: 0;
+  right: 0;
+  height: 460px;
+  background: rgba(254, 254, 248, 0.34);
+  clip-path: polygon(100% 0, 0 204px, 0 100%, 100% 256px);
+}
+
+.lower > section {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== Process ========== */
+.process .container {
+  padding-top: 25px;
+  border-top: 1px solid var(--blue);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 27% 47% 26%;
+  padding: 24px 0;
+  border-top: 1px solid var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.process-col {
+  min-height: 220px;
+  padding: 0 24px;
+}
+
+.process-col--left {
+  padding-left: 0;
+  border-right: 1px solid var(--blue);
+}
+
+.process-col--center {
+  text-align: center;
+  border-right: 1px solid var(--blue);
+}
+
+.process-col--right {
+  padding-right: 0;
+  text-align: right;
+}
+
+.process-heading {
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 95.598%;
+}
+
+.process-text {
+  margin-top: 60px;
+  color: var(--blue);
+  font-family: Barlow, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 95.12%;
+}
+
+.process-col--left .process-text {
+  max-width: 250px;
+}
+
+.process-col--right .process-text {
+  max-width: 220px;
+  margin-left: auto;
+}
+
+/* ========== Thanks ========== */
+.thanks {
+  padding: 110px 0 50px;
+}
+
+.thanks .container {
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--blue);
+}
+
+.thanks-text {
+  color: var(--cream);
+  font-family: Imbue, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 95.598%;
+  text-align: center;
+}
+
+.thanks-hl {
+  display: inline-block;
+  vertical-align: top;
+  color: var(--blue);
+}
+
+.thanks-hl small {
+  display: block;
+  font-size: inherit;
+}
+
+/* ========== Join ========== */
+.join-title {
+  color: var(--blue);
+  font-family: Imbue, serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 95.598%;
+}
+
+.join-card {
+  min-height: 360px;
+  margin-top: 150px;
+  background: var(--paper);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--plum); 
+  font-family: "Balsamiq Sans", sans-serif;
+  font-size: 28px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+  opacity: 0.8;
+  color: var(--blue);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1280px) {
+  .team-inner {
+    grid-template-columns: 480px 1fr;
+    column-gap: 120px;
+  }
+
+  .team-img {
+    height: 420px;
+  }
+
+  .team-title {
+    font-size: 72px;
+  }
+
+  .story-slogan {
+    font-size: 72px;
+  }
+
+  .story-body {
+    grid-template-columns: 1fr 420px;
+    column-gap: 40px;
+  }
+
+  .story-content,
+  .story-img {
+    height: 560px;
+  }
+
+  .story-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .team-inner {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .team-photo {
+    width: 85%;
+  }
+
+  .team-logo {
+    right: -10%;
+    width: 150px;
+    height: 160px;
+  }
+
+  .team-logo img {
+    width: 80px;
+  }
+
+  .team-title {
+    font-size: 56px;
+  }
+
+  .story-slogan {
+    font-size: 48px;
+  }
+
+  .story-body {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    padding: 50px 24px;
+  }
+
+  .story-content {
+    display: block;
+    height: auto;
+  }
+
+  .story-title {
+    position: static;
+    font-size: 48px;
+  }
+
+  .story-text {
+    max-width: none;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .story-img {
+    height: 320px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .process-col,
+  .process-col--left,
+  .process-col--center,
+  .process-col--right {
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+    border-right: 0;
+  }
+
+  .process-text,
+  .process-col--left .process-text,
+  .process-col--right .process-text {
+    max-width: none;
+    margin: 16px 0 0;
+  }
+
+  .thanks-text {
+    font-size: 28px;
+  }
+
+  .join-title {
+    font-size: 44px;
+  }
+
+  .join-card {
+    margin-top: 60px;
+  }
+
+  .contact-item {
+    font-size: 20px;
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+  }
+}

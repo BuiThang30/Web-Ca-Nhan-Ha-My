@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donation Process - The Nourish Spoon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,300..700&family=Cause:wght@400..700&family=Croissant+One&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="donation.css" />
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="/home" class="nav-logo">
+        <img src="images/logo.png" alt="The Nourish Spoon" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/children">Our Children</a></li>
+        <li><a href="/donation">Donation Process</a></li>
+      </ul>
+      <a href="/donation" class="btn btn--dark">DONATE ONLINE</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-banner">
+      <h1 class="page-title">Journey To<br />A Perfect Meal</h1>
+      <p class="page-sub">Our careful, guided process ensures that each of your donations is optimized for the children.</p>
+    </section>
+
+    <section class="flow">
+      <h2 class="flow-title">From Data to Meals</h2>
+      <div class="flow-cards">
+        <article class="flow-card">
+          <h3>Nutritional groups</h3>
+          <p>Each child belongs to a group based on their nutritional status compared to WHO standards.</p>
+        </article>
+        <article class="flow-card">
+          <h3>Daily ration</h3>
+          <p>The model calculates the food each group needs, and the total for the village.</p>
+        </article>
+        <article class="flow-card">
+          <h3>Stock &amp; needs</h3>
+          <p>It compares this with food on hand, then shows how long supplies last and what is needed most urgently.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="donate" id="donate">
+      <div class="tabs">
+        <label class="tab">
+          <input type="radio" name="mode" value="financial" />
+          <span class="tab-ring"></span>
+          <span class="tab-text">
+            <span class="tab-title">Financial Donation</span>
+            <span class="tab-desc">Enter an amount and instantly see the food it provides.</span>
+          </span>
+        </label>
+        <label class="tab">
+          <input type="radio" name="mode" value="supplies" />
+          <span class="tab-ring"></span>
+          <span class="tab-text">
+            <span class="tab-title">Supplies Donation</span>
+            <span class="tab-desc">See what is needed most urgently and send exactly what helps.</span>
+          </span>
+        </label>
+      </div>
+
+      <form class="panel panel-financial" id="financialForm" hidden novalidate>
+        <h2 class="panel-title">How Far Will Your Gift Go?</h2>
+        <hr class="rule-short" />
+
+        <div class="form-row">
+          <label class="form-label" for="amount">Amount you plan to give (VND)</label>
+          <input class="pill-input amount-input" id="amount" type="text" inputmode="numeric" autocomplete="off" placeholder="Amount you plan to give (VND)" />
+        </div>
+
+        <div class="form-row">
+          <span class="form-label">Support:</span>
+          <div class="support-options">
+            <label class="opt"><input type="radio" name="group" value="all" checked /><span>All children</span></label>
+            <label class="opt"><input type="radio" name="group" value="A" /><span>Group A</span></label>
+            <label class="opt"><input type="radio" name="group" value="B" /><span>Group B</span></label>
+            <label class="opt"><input type="radio" name="group" value="C" /><span>Group C</span></label>
+            <label class="opt"><input type="radio" name="group" value="D" /><span>Group D</span></label>
+          </div>
+        </div>
+
+        <hr class="rule" />
+        <button class="btn-plum btn-submit" type="submit">Submit</button>
+        <hr class="rule" />
+
+        <div class="estimate" id="estimate" aria-live="polite">
+          <p class="estimate-head" id="estimateHead">With {amount} VND, you provide:</p>
+          <p class="estimate-line" id="estimateItems">... wait for calculation</p>
+          <p class="estimate-line" id="estimateDays"></p>
+        </div>
+
+        <hr class="rule" />
+        <p class="form-msg" id="financialMsg" role="status"></p>
+        <button class="btn-plum btn-donate" type="button" id="donateBtn">Donate This Amount</button>
+      </form>
+
+      <div class="panel panel-supplies" id="panelSupplies" hidden>
+        <div class="needs">
+          <h2 class="needs-title">What Do the Children Need<br />Most Right Now?</h2>
+          <p class="needs-sub">This list is updated by the model from stock levels and daily use. Last updated: <span id="needsUpdated">{date}</span>.</p>
+
+          <table class="grid-table needs-table">
+            <thead>
+              <tr>
+                <th>Priority</th>
+                <th>Item</th>
+                <th>Lasts</th>
+                <th>Suggested amount</th>
+              </tr>
+            </thead>
+            <tbody id="needsBody"></tbody>
+          </table>
+        </div>
+
+        <form class="supply-form" id="supplyForm" novalidate>
+          <div class="supply-row">
+            <label for="sItems">Choose items and quantities</label>
+            <input class="pill-input" id="sItems" name="items" type="text" maxlength="1000" placeholder="e.g. Eggs: 200 pcs; Tofu: 20 kg" />
+          </div>
+          <div class="supply-row">
+            <label for="sDetails">Fill in your details and schedule a drop-off</label>
+            <input class="pill-input" id="sDetails" name="details" type="text" maxlength="300" placeholder="Name, phone, preferred date" />
+          </div>
+          <div class="supply-row">
+            <label for="sDropoff">Send to drop-off address or let us pick up</label>
+            <input class="pill-input" id="sDropoff" name="dropoff" type="text" maxlength="300" placeholder="Drop-off address or “Pick up at my address”" />
+          </div>
+          <div class="supply-row">
+            <label for="sEmail">Receive confirmation and see the stock update</label>
+            <input class="pill-input" id="sEmail" name="email" type="email" maxlength="200" placeholder="Email for confirmation" />
+          </div>
+          <p class="form-msg" id="supplyMsg" role="status"></p>
+          <button class="btn-plum btn-register" type="submit">Register a Supplies Donation</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="picks" id="picks" hidden>
+      <div class="picks-title">
+        <h2>Top 3 picks</h2>
+        <span>Most needed this week</span>
+      </div>
+      <ol class="picks-list" id="picksList">
+      </ol>
+    </section>
+
+    <section class="stock" hidden>
+      <div class="stock-head">
+        <h2 class="stock-title">Current stock feeds all children until</h2>
+        <p class="stock-sub" id="stockUntil">{dd/mm/yyyy} ({n} days left)</p>
+      </div>
+      <table class="grid-table stock-table">
+        <thead>
+          <tr>
+            <th>Food</th>
+            <th>In Stock</th>
+            <th>Daily use</th>
+            <th>Lasts until</th>
+            <th>Remaining</th>
+          </tr>
+        </thead>
+        <tbody id="stockBody"></tbody>
+      </table>
+    </section>
+
+    <section class="forecast" hidden>
+      <div class="forecast-text">
+        <h2>Shortfall forecast</h2>
+        <p id="forecastText">Without further donations, we run short of {food} from {dd/mm}. About {x} VND more is needed to last through {month}.</p>
+      </div>
+      <a class="btn-gap" href="#donate">Help Close the Gap</a>
+    </section>
+
+    <!-- BẮT ĐẦU: POPUP XÁC NHẬN (CÓ QR) -->
+    <div class="modal-overlay" id="donationModal" hidden>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <h2 class="modal-title">Confirm Donation</h2>
+        
+        <img src="images/qr.png" alt="QR Code" id="modalQr" class="modal-qr" />
+        
+        <p class="modal-desc" id="modalDesc">Please scan the QR code to transfer. Enter your email below to confirm.</p>
+        <input type="email" id="modalEmail" class="pill-input" placeholder="Enter your email" />
+        <button class="btn-plum" id="modalConfirmBtn" style="margin-top: 20px; width: 100%; height: 60px; font-size: 28px;">Confirm</button>
+      </div>
+    </div>
+    <!-- KẾT THÚC: POPUP XÁC NHẬN -->
+
+    <!-- BẮT ĐẦU: POPUP CẢM ƠN (THÀNH CÔNG) -->
+    <div class="modal-overlay" id="successModal" hidden>
+      <div class="modal-content" style="padding: 60px 40px;">
+        <button class="modal-close" id="successClose">&times;</button>
+        <h2 class="modal-title" style="margin-bottom: 20px;">Thank You!</h2>
+        <p class="modal-desc" style="font-size: 24px;">
+          Thank you for supporting the children's meals.<br>We will confirm with you soon.
+        </p>
+      </div>
+    </div>
+    <!-- KẾT THÚC: POPUP CẢM ƠN -->
+
+  </main>
+
+  <script src="script.js"></script>
+  <script src="donation.js"></script>
+</body>
+</html>

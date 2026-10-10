@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Children - The Nourish Spoon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,300..700&family=Cause:wght@400..700&family=Croissant+One&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="children.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="header">
+    <nav class="nav">
+      <a href="/home" class="nav-logo">
+        <img src="images/logo.png" alt="The Nourish Spoon" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/children">Our Children</a></li>
+        <li><a href="/donation">Donation Process</a></li>
+      </ul>
+      <a href="/donation" class="btn btn--dark">DONATE ONLINE</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+  <!-- ===== END NAV ===== -->
+
+  <main class="container">
+
+    <!-- BANNER -->
+    <section class="children-banner">
+      <h1 class="banner-title">Our Children &amp;<br />Their Menus</h1>
+      <p class="banner-sub">Every child has different needs, and the project is here to meet their needs.</p>
+    </section>
+
+    <!-- MEET THE CHILDREN -->
+    <section class="meet">
+      <div class="meet-head">
+        <h2 class="meet-title">Meet the<br />Children</h2>
+        <p class="meet-text">
+          We support 120 children aged 3-15 at the schools in Ten Village. To protect their privacy,
+          <strong>we never publish full names, birthdates or individual health data</strong>;
+          information is presented by group, and photos are shared only with consent from organization.
+        </p>
+      </div>
+      <div class="meet-photos">
+        <img src="images/children-1.png" alt="Em nhỏ đang vẽ tranh trong lớp" />
+        <img src="images/children-2.png" alt="Sân trường và núi mờ sương" />
+        <img src="images/children-3.png" alt="Phòng nghỉ trưa của các em" />
+      </div>
+    </section>
+
+    <!-- NUTRITIONAL GROUPS -->
+    <section class="groups">
+      <h2 class="groups-title">Nutritional Groups</h2>
+
+      <div class="groups-box">
+        <table class="groups-table">
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Characteristics</th>
+              <th>Diet focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cell-group">Energy &amp; protein support</td>
+              <td>Low weight for age or height</td>
+              <td>Energy- and protein-dense; 4–5 small meals</td>
+            </tr>
+            <tr>
+              <td class="cell-group">Height-growth support</td>
+              <td>Short for age</td>
+              <td>Calcium, vitamin D, zinc, quality protein</td>
+            </tr>
+            <tr>
+              <td class="cell-group">Healthy maintenance</td>
+              <td>Measurements within normal range</td>
+              <td>Balanced, varied meals</td>
+            </tr>
+            <tr>
+              <td class="cell-group">Weight monitoring</td>
+              <td>High weight for height</td>
+              <td>Less sugar, more vegetables and activity</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="groups-note">
+          Children with signs of severe malnutrition or illness are referred to a health facility instead of following the suggested menus.
+        </p>
+      </div>
+    </section>
+
+    <!-- LOCAL INGREDIENTS -->
+    <section class="local">
+      <div class="local-row">
+        <h2 class="local-title">Local<br />Ingredients</h2>
+        <p class="local-text">
+          Menus prioritize seasonal food available in Bản Tèn: rice, maize, tubers; beans and tofu; eggs, fish, meat; leafy greens and vegetables (pumpkin, mustard greens, sweet-leaf greens...); seasonal fruit.
+          Local sourcing lowers cost and supports village farmers.
+        </p>
+      </div>
+    </section>
+
+    <!-- SAMPLE MENU -->
+    <section class="menu">
+      <h2 class="menu-heading">Sample Menu</h2>
+
+      <table class="menu-table">
+        <thead>
+          <tr>
+            <th>Meal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cell-meal">Breakfast</td>
+            <td>Steamed cornmeal or egg-vegetable porridge</td>
+          </tr>
+          <tr>
+            <td class="cell-meal">Snack</td>
+            <td>A glass of milk</td>
+          </tr>
+          <tr>
+            <td class="cell-meal">Lunch</td>
+            <td>Rice, braised meat or fish,tofu, vegetable soup</td>
+          </tr>
+          <tr>
+            <td class="cell-meal">Snack</td>
+            <td>Seasonal fruit, boiled sweet potato</td>
+          </tr>
+          <tr>
+            <td class="cell-meal">Dinner</td>
+            <td>Rice, stir-fried greens, fried eggs &amp; sausage, soybeans/peanuts, soup</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CTA (khung xanh cuối trang, đặt nội dung ở đây) -->
+    <section class="cta"></section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
