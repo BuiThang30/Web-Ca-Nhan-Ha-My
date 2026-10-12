@@ -1,6 +1,6 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const rateLimit = require("express-rate-limit");
+const { rateLimit } = require("express-rate-limit");
 require("dotenv").config();
 
 const router = express.Router();

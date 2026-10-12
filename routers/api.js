@@ -87,15 +87,16 @@ router.post('/donations/financial', (req, res) => {
   if (!amount) return res.status(400).json({ error: 'Amount is required' });
   const groupName = group || 'all';
   
-  db.run(`INSERT INTO financial_donations (amount, group_name) VALUES (?, ?)`, [Number(amount), groupName], function (err) {
-      if (err) return res.status(500).json({ error: 'Server error' });
+  try {
+      const stmt = db.prepare(`INSERT INTO financial_donations (amount, group_name) VALUES (?, ?)`);
+      const info = stmt.run(Number(amount), groupName);
       
       const ratio = Number(amount) / BASE_COST;
       let estimatedItems = BASE_MENU.map(item => ({ name: item.name, unit: item.unit, qty: item.baseQty * ratio }));
       estimatedItems = estimatedItems.filter(i => i.qty >= 0.1);
 
       res.json({
-        id: this.lastID,
+        id: info.lastInsertRowid,
         estimate: {
           amount: Number(amount),
           items: estimatedItems,
@@ -104,14 +105,23 @@ router.post('/donations/financial', (req, res) => {
           days: Math.max(1, Math.floor(amount / 684000))
         }
       });
-  });
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Server error' });
+  }
 });
 
 router.post('/donations/supplies', (req, res) => {
   const { items, details, dropoff, email } = req.body;
-  db.run(`INSERT INTO supply_donations (items, details, dropoff, email) VALUES (?, ?, ?, ?)`, [items, details, dropoff, email], function (err) {
-      res.json({ id: this.lastID });
-  });
+  
+  try {
+      const stmt = db.prepare(`INSERT INTO supply_donations (items, details, dropoff, email) VALUES (?, ?, ?, ?)`);
+      const info = stmt.run(items, details, dropoff, email);
+      res.json({ id: info.lastInsertRowid });
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Server error' });
+  }
 });
 
 module.exports = router;
